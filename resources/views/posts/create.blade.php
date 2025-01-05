@@ -9,7 +9,7 @@
             <input type="text" name="title" class="form-control"> <br>
             <div class="form-group"><label for="description"> The Description:</label> 
                 <textarea name="description" id="" cols="30" rows="10" class="form-control">  </textarea></div> <br>
-                <div class="form-group"><input type="file" name="image"> </div> <br><br>
+                <div class="form-group"><input type="file" name="images[]" multiple > </div> <br><br>
     <input type="submit" name="send" value="send" class="btn btn-secondary">
         </form>
 

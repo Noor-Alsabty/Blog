@@ -3,8 +3,10 @@
 @section("continer")
 <a class="m-5 mt-4  btn btn-secondary btn-lg active"  href="{{ route("add.post") }}"> add new post </a> <br> <br>
     @forelse ($p as $post)
-        <div class="m-5 mt-2 card border-dark mb-3" style="max-width: 30rem">
-            <img class="card-img-top" src="/images/posts/{{ $post->image }}" alt=" ">
+        <div class="m-5 mt-2 card border-dark mb-3" style="max-width: 40rem">
+            @foreach ( json_decode($post->image) as $img)
+            <img class="card-img-top" src= "/images/posts/{{ $img }}" alt=" ">
+            @endforeach
             <div class="card-body text-dark">
             <h1 class="card-title">{{ $post->title }}</h1>
             <p class="card-text">{{ $post->description }}</p>
